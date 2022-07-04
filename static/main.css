@@ -1,0 +1,77 @@
+*{
+	margin: 10px 25px;
+}
+body{
+	width: 1200px;
+}
+.header{
+	background:floralwhite;
+}
+.header ul{
+	list-style: none;
+}
+.person{
+	text-align: right;
+	margin-top: -90px;
+}
+.person ul{
+	position: relative;
+	display: inline-flex;
+	list-style: none;
+margin-top: -30px;
+
+
+}
+.person ul li{
+font-size: 1.25em;
+	float: right;
+	
+padding: 10px;
+	margin: 10px;
+}
+.insti ul{
+transform:translate(40px,-100px);
+}
+
+
+.personal-info ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+color:#adff2f;
+}
+.subcleaning{
+	margin-left: -10px;
+	display: none;
+	list-style: none;
+	color: black;
+	
+}
+.subcleaning ul{
+	width: 70px;	
+	transform: translate(20px,0);
+}
+
+
+.person ul li:hover .subcleaning{
+	
+	display: block;
+	position:absolute;
+	background: floralwhite;
+	
+}
+.person ul li:hover .subcleaning ul{
+	
+	font-size: 0.8em;
+	margin-top: 10px;
+	margin-left:-20px ;
+	display: block;	
+}
+
+.person ul li:hover .subcleaning ul li:hover{
+	color:#adff2f;
+}

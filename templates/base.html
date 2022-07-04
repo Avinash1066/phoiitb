@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+	
+
+	<title>
+		PHO site	
+	</title>
+</head>
+<body>
+    {% if messages %}
+	{% for message in messages %}
+{{message}}
+{% endfor %}
+{% endif %}
+	<div class="header"><ul><li><img src="https://www.raiuniversity.edu/wp-content/uploads/IIT-Bombay.jpg" style="width:100px;height: 100px;"></li>
+<li><div class="insti">
+		<ul><li><h2>IIT BOMBAY{% if user.is_authenticated %}
+			<li class="link">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				&nbsp&nbsp&nbsp&nbsp{{ user.first_name }} {{user.last_name}}</li>
+			{% endif %}</h2></li>
+			
+			<li><h1>IITB PHO Work Portal</h1></li></ul></div></li>
+<li ><div class="person">
+	{% if user.is_authenticated %}
+
+	<ul> 
+		<li class="link"><a href="{% url 'cleaninglist-page' %}">Home</a></li>
+		<li class="link">Cleaning Done
+			<div class="subcleaning">
+				<ul>
+					<li><a href="{% url 'cleaninglist-page' %}">Room</a></li>
+					<li><a href="{% url 'wingcleaninglist-page' %}">Wing</a></li></div>
+			</li>
+       
+		
+        
+		<li class="link">Cleaning
+		<div class="subcleaning">
+			<ul>
+				<li><a href="{% url 'cleaning-page' %}">Room</a></li>
+				<li><a href="{% url 'wingcleaning-page' %}">Wing</a></li></div>
+		</li>
+		<li class="link"><a href="{% url 'logout' %}">LOGOUT</a></li></ul>
+		{% else %}
+		<ul>
+        <li class="link"><a href="{% url 'login' %}">LOGIN</a></li>
+        
+
+
+
+
+
+		{% endif %}
+</ul></div></li></ul></div>
+
+{% block content %}{% endblock content %}
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

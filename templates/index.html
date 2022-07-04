@@ -1,0 +1,16 @@
+ {% extends 'base.html' %}
+ {% block content %}
+ {% for cleaning in cleanings %}
+ {% if cleaning.name == user    %}
+ <h2><a href="{% url 'cleaningdetail-page' cleaning.id %}">Hostel:{{cleaning.hostel}}</a></h2>
+ <h5>{{cleaning.timeapply }}</h5>
+ <h3>Room:{{cleaning.room}}</h3>
+ <h3>Time for cleaning:{{cleaning.time}}</h3>
+ <br>
+ {% endif %}
+ {% endfor %}
+ 
+ 
+ 
+ 
+ {% endblock content %}

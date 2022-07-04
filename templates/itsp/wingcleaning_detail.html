@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+ {% block content %}
+ 
+ <a href="{% url 'wingcleaningdelete-page' object.id %}">Delete-record</a>
+ <a href="{% url 'wingcleaningupdate-page' object.id %}">Update-record</a>
+ <h2>Hostel:{{wingcleaning.hostel}}</h2>
+ <h3>Room:{{wingcleaning.Room}}</h3>
+ <h3>Cleaning Shift:{{wingcleaning.shift}}</h3>
+ <h3>Time for cleaning:{{wingcleaning.timeapply}}</h3>
+ <br>
+ 
+ {% endblock content %}

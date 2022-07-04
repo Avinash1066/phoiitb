@@ -1,0 +1,44 @@
+*{
+	margin: 10px 25px;
+}
+body{
+	width: 1200px;
+}
+.header{
+	background:floralwhite;
+}
+.header ul{
+	list-style: none;
+}
+.person{
+	text-align: right;
+	margin-top: -90px;
+}
+.person ul{
+	position: relative;
+	display: inline-flex;
+	list-style: none;
+margin-top: -30px;
+
+
+}
+.person ul li{
+font-size: 1.25em;
+	float: right;
+	margin-right: 50px;
+}
+.insti ul{
+transform:translate(40px,-100px);
+}
+.person ul{
+	transform: translate(110px,0);
+}
+.personal-info{
+	background:floralwhite ;
+}
+.personal-info ul{
+	list-style: none;
+}
+.link{
+	text-decoration: none;
+}

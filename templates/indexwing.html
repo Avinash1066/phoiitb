@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for cleaning in wingcleanings %}
+{% if cleaning.name == user    %}
+<h2><a href="{% url 'wingcleaningdetail-page' cleaning.id %}">Hostel:{{cleaning.hostel}}</a></h2>
+<h5>{{cleaning.timeapply }}</h5>
+<h3>Room:{{cleaning.Room}}</h3>
+<h3> SHIFT:{{cleaning.shift}}</h3>
+<br>
+{% endif %}
+{% endfor %}
+
+
+
+
+{% endblock content %}
